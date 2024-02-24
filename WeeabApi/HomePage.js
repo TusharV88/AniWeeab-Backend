@@ -25,7 +25,7 @@ export const seasonsNow = async (req, res) => {
                 },
             });
 
-            const data = dataShuffler([], mangaData.data.data);
+            const data = dataShuffler(animeData.data.data, mangaData.data.data);
 
             res.status(200).json({
                 data
