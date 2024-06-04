@@ -18,9 +18,7 @@ const DATABASE_URL = process.env.DATABASE_URL;
 connectDB(DATABASE_URL);
 
 // cors policy
-app.use(cors({
-    origin: 'https://aniweeab.onrender.com',
-}));
+app.use(cors());
 
 // use format data
 app.use(express.json());
