@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "This is a aniweeab backend server in which full authorization implement and give information about anime and manga.",
   "main": "index.js",
+  "engines": {
+    "node": "14.x"
+  },
   "scripts": {
     "start": "node app.js",
     "dev": "nodemon app.js"
