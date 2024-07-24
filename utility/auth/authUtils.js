@@ -41,8 +41,9 @@ export function resetLinkGenerate(user_id) {
     const secret = user_id + process.env.JWT_SECRET;
     const token = tokenGenerator(user_id, secret, '15m');
     const id = tokenToBase64(user_id);
+    const reset_url = process.env.MAIN_URL + `/${id}/${token}`; 
 
-    return process.env.MAIN_URL + `/${id}/${token}`;
+    return reset_url;
 }
 
 // Convert Base64 String To Token
