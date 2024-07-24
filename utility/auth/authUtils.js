@@ -41,8 +41,8 @@ export function resetLinkGenerate(user_id) {
     const secret = user_id + process.env.JWT_SECRET;
     const token = tokenGenerator(user_id, secret, '15m');
     const id = tokenToBase64(user_id);
-    
-    return `https://aniweeab.onrender.com/${id}/${token}`; 
+
+    return process.env.MAIN_URL + `/${id}/${token}`;
 }
 
 // Convert Base64 String To Token
